@@ -1,0 +1,134 @@
+.footer {
+  padding: 40px 0 60px;
+  font-family: var(--font-primary);
+  background: rgb(var(--color-blue));
+}
+
+.footer__container {
+  display: flex;
+  gap: 107px;
+}
+
+.footer__wrapper-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 42px;
+  flex-shrink: 0;
+}
+
+.footer__logo-area {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer__logo {
+  display: inline-block;
+
+  &--isker {
+    width: 105px;
+  }
+
+  &--demeu {
+    width: 50px;
+  }
+
+  img {
+    display: block;
+    width: 100%
+  }
+}
+
+.footer__social {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__social-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  path {
+    transition: var(--transition-tf) var(--transition-d);
+  }
+
+  &:hover {
+    path {
+      fill: rgb(var(--color-primary-hover));
+    }
+  }
+}
+
+.footer__wrapper-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-grow: 1;
+  margin: 0 0 0 auto;
+}
+
+.footer__links {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.footer__links-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__links-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(var(--color-dark-primary));
+}
+
+.footer__links-list-item:not(:last-child) {
+  margin: 0 0 6px;
+}
+
+.footer__links-list-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(var(--color-dark-primary));
+  text-decoration: none;
+  transition: var(--transition-tf) var(--transition-d);
+}
+
+@media(hover: hover) {
+  .footer__links-list-link:hover {
+    color: rgb(var(--color-primary));
+  }
+}
+
+@media(hover: none) {
+  .footer__links-list-link:active {
+    color: rgb(var(--color-primary));
+  }
+}
+
+@media(max-width: $mobile) {
+  .footer__container {
+    flex-direction: column;
+    gap: 33px;
+  }
+
+  .footer__wrapper-left {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer__wrapper-right {
+    gap: 30px;
+    margin: 0;
+  }
+
+  .footer__links {
+    width: 154px;
+  }
+}
