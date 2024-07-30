@@ -1,5 +1,20 @@
-$some: 'some';
+$mobile: 950px;
 
 :root {
+  --mobile: 950px;
+
+  --header-height-desktop: 100px;
+  --header-height-mobile: 72px;
+
   --font-primary: 'gilroy';
+
+  --color-primary: 157 9 124;           // #9d097c
+  --color-primary-hover: 205 27 165;    // #cd1ba5
+  --color-light: 255 255 255;           // #ffffff
+  --color-dark-primary: 50 51 76;       // #32334c
+  --color-dark-secondary: 28 28 30;     // 1c1c1e
+  --color-gray-primary: 119 120 147;    // 777893
+
+  --transition-tf: ease;
+  --transition-d: 200ms;
 }
