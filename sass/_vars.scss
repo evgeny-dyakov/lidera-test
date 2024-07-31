@@ -1,10 +1,14 @@
 $mobile: 950px;
+$container: 1168px;
 
 :root {
   --mobile: 950px;
+  --container: 1168px;
+  --container-padding: 20px;
 
   --header-height-desktop: 100px;
   --header-height-mobile: 72px;
+  --banner-img-height-mobile: 350px;
 
   --font-primary: 'gilroy';
 
