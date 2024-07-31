@@ -38,6 +38,7 @@
   --color-dark-secondary: 28 28 30;
   --color-gray: 119 120 147;
   --color-blue: 198 217 221;
+  --gradient: linear-gradient(260deg, #2d1178 25%, #db2d8f 78%);
   --transition-tf: ease;
   --transition-d: 200ms;
 }
@@ -83,14 +84,42 @@
 }
 
 @media (hover: hover) {
-  .button-default:hover,
-  .button-default:focus {
+  .button-default:hover {
     background: rgb(var(--color-primary-hover));
   }
 }
 @media (hover: none) {
   .button-default:active {
     background: rgb(var(--color-primary-hover));
+  }
+}
+.button-wide {
+  display: block;
+  max-width: 240px;
+  padding: 30px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(var(--color-primary));
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid rgb(var(--color-primary));
+  border-radius: 32px;
+  transition: var(--transition-tf) var(--transition-d);
+}
+
+@media (hover: hover) {
+  .button-wide:hover {
+    color: rgb(var(--color-light));
+    background: rgb(var(--color-primary-hover));
+    border: 1px solid rgb(var(--color-primary-hover));
+  }
+}
+@media (hover: none) {
+  .button-wide:active {
+    background: rgb(var(--color-primary-hover));
+    border: 1px solid rgb(var(--color-primary-hover));
   }
 }
 @media (max-width: 950px) {
@@ -586,6 +615,37 @@
     rotate: -45deg;
   }
 }
+.announce {
+  padding: 144px 0 234px;
+}
+
+.announce__text {
+  max-width: 900px;
+  margin: 0 auto 42px;
+  font-family: var(--font-primary);
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 500;
+  text-align: center;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.announce__button-wide {
+  margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+  .announce {
+    padding: 120px 0;
+  }
+  .announce__text {
+    margin: 0 auto 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 .footer {
   padding: 40px 0 60px;
   font-family: var(--font-primary);
@@ -706,6 +766,11 @@
   }
   .footer__links {
     width: 154px;
+  }
+}
+@media (max-width: 576px) {
+  .footer__wrapper-left {
+    justify-content: space-between;
   }
 }
 /*# sourceMappingURL=index.css.map */

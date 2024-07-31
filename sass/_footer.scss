@@ -132,3 +132,10 @@
     width: 154px;
   }
 }
+
+@media(max-width: 576px) {
+  .footer__wrapper-left {
+    justify-content: space-between;
+  }
+}
+

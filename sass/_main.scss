@@ -40,8 +40,7 @@
 }
 
 @media(hover: hover) {
-  .button-default:hover,
-  .button-default:focus {
+  .button-default:hover {
     background: rgb(var(--color-primary-hover));
   }
 }
@@ -49,6 +48,37 @@
 @media(hover: none) {
   .button-default:active {
     background: rgb(var(--color-primary-hover));
+  }
+}
+
+.button-wide {
+  display: block;
+  max-width: 240px;
+  padding: 30px;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(var(--color-primary));
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid rgb(var(--color-primary));
+  border-radius: 32px;
+  transition: var(--transition-tf) var(--transition-d);
+}
+
+@media(hover: hover) {
+  .button-wide:hover {
+    color: rgb(var(--color-light));
+    background: rgb(var(--color-primary-hover));
+    border: 1px solid rgb(var(--color-primary-hover));
+  }
+}
+
+@media(hover: none) {
+  .button-wide:active {
+    background: rgb(var(--color-primary-hover));
+    border: 1px solid rgb(var(--color-primary-hover));
   }
 }
 
