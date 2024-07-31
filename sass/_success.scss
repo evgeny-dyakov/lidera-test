@@ -1,0 +1,240 @@
+.success {
+  padding: 87px 0 103px;
+  font-family: var(--font-primary);
+  color: rgb(var(--color-dark-primary));
+  background: rgb(var(--color-blue));
+  border-radius: 40px;
+}
+
+.success__container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas:
+    "title imgs"
+    "text imgs";
+}
+
+.success__title-area {
+  grid-area: title;
+  outline: 1px dotted red;
+}
+
+.success__text-area {
+  grid-area: text;
+  outline: 1px dotted red;
+}
+
+.success__imgs-area {
+  position: relative;
+  grid-area: imgs;
+  outline: 1px dotted black;
+}
+
+@media(max-width: 1140px) {
+  .success__imgs-area {
+    overflow: hidden;;
+  }
+}
+
+@media(hover: hover) {
+  .success__imgs-area {
+    &:hover {
+      .success__img {
+        &--main {
+          scale: 1.08;
+        }
+
+        &--1 {
+          left: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+
+        &--2,
+        &--3 {
+          top: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+
+        &--4 {
+          right: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+
+        &--5 {
+          bottom: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+      }
+    }
+  }
+}
+
+@media(hover: none) {
+  .success__imgs-area {
+    &:active {
+      .success__img {
+        &--main {
+          scale: 1.08;
+        }
+
+        &--1 {
+          left: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+
+        &--2,
+        &--3 {
+          top: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+
+        &--4 {
+          right: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+
+        &--5 {
+          bottom: calc(var(--galery-gap-desktop) - var(--galery-gap-change));
+        }
+      }
+    }
+  }
+}
+
+.success__title {
+  display: inline-block;
+  margin: 0 0 24px;
+  font-size: 20px;
+  font-weight: 500;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.succes__subtitle {
+  margin: 0 0 32px;
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 700;
+}
+
+.success__text {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.success__img {
+  position: absolute;
+  transition: var(--transition-tf) 500ms;
+
+  &--main {
+    top: 50.7%;
+    left: 53%;
+    width: 272px;
+    height: 219px;
+    translate: -50% -50%;
+  }
+
+  &--1 {
+    bottom: 0;
+    left: var(--galery-gap-desktop);
+    width: 194px;
+    height: 125px;
+    translate: -100% 0;
+  }
+
+  &--2 {
+    top: var(--galery-gap-desktop);
+    right: 0;
+    width: 107px;
+    height: 106px;
+    translate: 0 -100%;
+  }
+
+  &--3 {
+    top: var(--galery-gap-desktop);
+    right: 40px;
+    width: 134px;
+    height: 132px;
+    translate: 0 -100%;
+  }
+
+  &--4 {
+    top: 15px;
+    right: var(--galery-gap-desktop);
+    width: 155px;
+    height: 126px;
+    translate: 100% 0;
+  }
+
+  &--5 {
+    bottom: var(--galery-gap-desktop);
+    left: 40px;
+    width: 154px;
+    height: 126px;
+    translate: 0 100%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media(max-width: $mobile) {
+  .success {
+    padding: 20px 0;
+  }
+
+  .success__container {
+    display: block;
+  }
+
+  .success__title-area {
+    margin: 0 0 20px;
+  }
+
+  .succes__subtitle {
+    margin: 0;
+  }
+
+  .success__imgs-area {
+    margin: 0 0 20px;
+    height: 520px;
+  }
+
+  .success__img {
+    position: absolute;
+    transition: var(--transition-tf) var(--galery-transition-d);
+
+    &--main {
+      width: 190px;
+      height: 153px;
+    }
+
+    &--1 {
+      width: 136px;
+      height: 87px;
+    }
+
+    &--2 {
+      width: 75px;
+      height: 74px;
+    }
+
+    &--3 {
+      width: 94px;
+      height: 92px;
+    }
+
+    &--4 {
+      width: 109px;
+      height: 88px;
+    }
+
+    &--5 {
+      width: 108px;
+      height: 88px;
+    }
+  }
+}
