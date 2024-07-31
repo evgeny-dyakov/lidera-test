@@ -151,7 +151,7 @@
 
 @media(max-width: $mobile) {
   .success {
-    padding: 20px 0;
+    padding: 40px 0;
   }
 
   .success__container {
@@ -212,6 +212,10 @@
       height: 88px;
       bottom: var(--galery-gap-mobile);
     }
+  }
+
+  .success__text:last-of-type {
+    margin: 0 0 30px;
   }
 
   .success__button-default {
