@@ -1100,6 +1100,7 @@ main {
 .notice__swiper {
   width: 100%;
   height: 286px;
+  overflow: hidden;
 }
 
 .notice__swiper-slide {
