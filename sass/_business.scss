@@ -199,11 +199,15 @@
     overflow: hidden;
     transition: var(--transition-tf) var(--transition-d);
   }
+}
 
-  &:hover {
-    &::before {
-      width: 450px;
-      height: 450px;
+@media(hover: hover) {
+  .business__img {
+    &:hover {
+      &::before {
+        width: 450px;
+        height: 450px;
+      }
     }
   }
 }

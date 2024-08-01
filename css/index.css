@@ -1347,11 +1347,13 @@ main {
   overflow: hidden;
   transition: var(--transition-tf) var(--transition-d);
 }
-.business__img:hover::before {
-  width: 450px;
-  height: 450px;
-}
 
+@media (hover: hover) {
+  .business__img:hover::before {
+    width: 450px;
+    height: 450px;
+  }
+}
 .bussiness__title {
   min-height: 64px;
   margin: 0 0 12px;
