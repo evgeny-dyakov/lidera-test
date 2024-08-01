@@ -1,0 +1,250 @@
+.business {
+  font-family: var(--font-primary);
+  padding: 130px 0 60px;
+}
+
+.business__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.business__swiper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.business__swiper-wrapper {
+  margin: 0 0 20px;
+}
+
+.business__swiper-slide {
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.business__controls {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  width: auto;
+}
+
+.business__swiper-pagination {
+  position: static;
+  width: auto !important;
+  height: 24px;
+
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    margin: 0 !important;
+    opacity: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      translate: -50% -50%;
+      border-radius: 50%;
+      background: rgb(var(--color-dark-primary));
+      transition: var(--transition-tf) var(--transition-d);
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: transparent;
+    border: 1px solid rgb(var(--color-primary));
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      background: rgb(var(--color-primary));
+    }
+  }
+}
+
+@media(hover: hover) {
+  .business__swiper-pagination {
+    .swiper-pagination-bullet {
+      &:hover {
+        &::after {
+          background: rgb(var(--color-primary-hover));
+        }
+      }
+    }
+    .swiper-pagination-bullet-active {
+      &:hover {
+        &::after {
+          background: rgb(var(--color-primary));
+        }
+      }
+    }
+  }
+}
+
+.business__swiper-button-prev,
+.business__swiper-button-next {
+  position: static;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  background: #fff0f5;
+  border-radius: 50%;
+  transition: var(--transition-tf) var(--transition-d);
+
+  svg {
+    width: auto;
+    height: auto;
+    scale: 1.1;
+
+    path {
+      transition: var(--transition-tf) var(--transition-d);
+    }
+  }
+
+  &::after {
+    content: '';
+  }
+}
+
+@media(hover: hover) {
+  .business__swiper-button-prev,
+  .business__swiper-button-next {
+
+    &:hover {
+      background: rgb(var(--color-primary-hover));
+
+      path {
+        stroke: rgb(var(--color-light));
+      }
+    }
+
+    &:active {
+      background: #fff0f5;
+
+      path {
+        stroke: rgb(var(--color-primary-hover));
+      }
+    }
+  }
+}
+
+@media(hover: none) {
+  .business__swiper-button-prev,
+  .business__swiper-button-next {
+
+    &:active {
+      background: rgb(var(--color-primary));
+
+      path {
+        stroke: rgb(var(--color-light));
+      }
+    }
+  }
+}
+
+.business__swiper-button-next {
+  svg {
+    rotate: 180deg;
+  }
+}
+
+.business__img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 398px;
+  margin: 0 0 16px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &::before {
+    content: 'Подробнее';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: rgb(var(--color-light));
+    font-weight: 600;
+    background: #fa9397;
+    border-radius: 50%;
+    translate: -50% -50%;
+    overflow: hidden;
+    transition: var(--transition-tf) var(--transition-d);
+  }
+
+  &:hover {
+    &::before {
+      width: 450px;
+      height: 450px;
+    }
+  }
+}
+
+.bussiness__title {
+  min-height: 64px;
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.bussiness__location {
+  display: inline-block;
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.bussiness__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+@media(max-width: $mobile) {
+  .business {
+    padding: 80px 0 40px;
+  }
+
+  .business__container {
+    align-items: flex-start;
+  }
+
+  .business__img {
+    height: 260px;
+  }
+
+  .business__controls {
+    display: none;
+  }
+}

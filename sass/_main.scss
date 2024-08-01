@@ -87,8 +87,28 @@ main {
   }
 }
 
+.h2-title {
+  margin: 0 0 40px;
+  font-family: var(--font-primary);
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 700;
+  text-align: center;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media(max-width: $mobile) {
   .body {
     margin: var(--header-height-mobile) 0 0;
+  }
+
+  .h2-title {
+    margin: 0 0 12px;
+    padding: 0 0 0 10px;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: left;
   }
 }
